@@ -25,7 +25,7 @@ export const LandingPage = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/topcategoriesandsellers")
+      .get("http://54.144.49.79:5000/topcategoriesandsellers")
       .then((result) => {
         settopcategories(result.data[0].categoriesCount);
         setBestSellers(result.data[0].productCount);
