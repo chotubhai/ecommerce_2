@@ -16,7 +16,7 @@ export const Navbar = () => {
   const getRemmd = (value) => {
     setQ(value);
     axios
-      .post("http://localhost:5000/autocomplete", { q: value })
+      .post("http://54.144.49.79:5000/autocomplete", { q: value })
       .then((res) => {
         const data = res.data.map(({ name: value, ...rest }) => ({
           value,

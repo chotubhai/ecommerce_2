@@ -30,7 +30,7 @@ export const ProductViewPage = () => {
     const userId = localStorage.getItem('user');
     if (!userId) window.location.href = window.location.origin + "/cart";
     else
-      axios.post("http://localhost:5000/addtocart", {
+      axios.post("http://54.144.49.79:5000/addtocart", {
         userId,
         productId: window.location.search.split("=")[1],
       });
@@ -38,12 +38,12 @@ export const ProductViewPage = () => {
 
   useEffect(() => {
     console.log(
-      `http://localhost:5000/getproduct/${window.location.search.split("=")[1]}`
+      `http://54.144.49.79:5000/getproduct/${window.location.search.split("=")[1]}`
     );
 
     axios
       .get(
-        `http://localhost:5000/getproduct/${
+        `http://54.144.49.79:5000/getproduct/${
           window.location.search.split("=")[1]
         }`
       )

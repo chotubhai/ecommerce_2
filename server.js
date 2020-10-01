@@ -29,7 +29,7 @@ var PaytmConfig = {
 
 var txn_url = "https://securegw-stage.paytm.in/order/process"; // for staging
 
-var callbackURL = "http://localhost:5000/paymentReceipt";
+var callbackURL = "http://54.144.49.79:5000/paymentReceipt";
 
 const {
   miscModel,
@@ -88,7 +88,7 @@ app.get("/addtodatabase", () => {
         tempArr1.push({
           name: categorytemp,
           count: 1,
-          image: `http://localhost:5000/${categorytemp}.jpg`,
+          image: `http://54.144.49.79:5000/${categorytemp}.jpg`,
         });
       }
       // console.log();
@@ -340,7 +340,7 @@ app.post("/paymentReceipt", (req, res) => {
                   { _id: responseData["ORDERID"] },
                   { status: "Delivered" }
                 )
-                .then(() => res.redirect(301, "http://localhost:3000/cart"));
+                .then(() => res.redirect(301, "http://54.144.49.79:3000/cart"));
             });
         });
       });

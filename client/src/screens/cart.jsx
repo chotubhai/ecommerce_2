@@ -58,7 +58,7 @@ const initiateTransaction = ()=>{
   const tempItem = [];
   for (let item of checked) tempItem.push(item.id);
   
-  axios.post("http://localhost:5000/deposit",{
+  axios.post("http://54.144.49.79:5000/deposit",{
     userId: localStorage.getItem("user"),
     productId: tempItem,
     amount: subtotal
@@ -80,7 +80,7 @@ useEffect(()=>{
 
   useEffect(() => {
     axios
-      .post("http://localhost:5000/getcart", {
+      .post("http://54.144.49.79:5000/getcart", {
         userId: localStorage.getItem("user"),
       })
       .then((cart) => {
@@ -154,7 +154,7 @@ const LogIn = () => {
     setLoading(true);
 
     axios
-      .post("http://localhost:5000/createUser", {
+      .post("http://54.144.49.79:5000/createUser", {
         name: values.name,
         email: values.email,
         password: values.email,

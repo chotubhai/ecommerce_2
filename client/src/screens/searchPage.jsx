@@ -14,7 +14,7 @@ export const SearchPage = () => {
   useEffect(()=>{
   
     axios
-      .post("http://localhost:5000/search", { q: window.location.search.split("=")[1] ,skip:0,limit:20})
+      .post("http://54.144.49.79:5000/search", { q: window.location.search.split("=")[1] ,skip:0,limit:20})
       .then((res) => {
        console.log(res.data);
        setData(res.data);
