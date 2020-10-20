@@ -90,12 +90,8 @@ useEffect(()=>{
   }, []);
   return (
     <>
-    <Layout>
-            <Header>
-          <div className="logo" />
-          <Navbar />
-        </Header>
-</Layout>
+   <Navbar />
+
       <br />
       <br />
 

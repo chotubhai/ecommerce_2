@@ -16,6 +16,7 @@ var allowCrossDomain = function (req, res, next) {
 };
 
 app.use(express.static("./public"));
+app.use(express.static(path.resolve(__dirname,"client","build")));
 app.use(allowCrossDomain);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -113,6 +114,10 @@ app.get("/addtodatabase", () => {
       });
     });
 });
+
+app.get("/",(req,res)=>{
+  res.sendFile(path.resolve(__dirname,"client","build","index.html"));
+})
 
 app.get("/topcategoriesandsellers", (req, res) => {
   miscModel

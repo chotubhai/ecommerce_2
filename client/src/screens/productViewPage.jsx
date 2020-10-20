@@ -66,11 +66,8 @@ export const ProductViewPage = () => {
 
   return (
     <>
+       <Navbar />
       <Layout className="layout">
-        <Header>
-          <div className="logo" />
-          <Navbar />
-        </Header>
 
         <br />
         <br />

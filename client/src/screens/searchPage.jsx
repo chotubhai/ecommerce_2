@@ -24,10 +24,7 @@ export const SearchPage = () => {
 
   return (
     <>
-       <Header>
-          <div className="logo" />
-          <Navbar />
-        </Header>
+   <Navbar />
       <div style={{ padding: "20px 0" }}>
         <List
           size="large"
